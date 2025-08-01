@@ -1,0 +1,204 @@
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            border: 1px solid green;
+            grid-template-rows: 20% 25% 30% 25%;
+            grid-template-columns: 25% 25% 25% 25%;
+            gap: 5px;
+            height: 100vh;
+        }
+        .header {
+            background-color: #ff5722;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            grid-row: 1 / 2;
+            grid-column: 1 / 5;
+        }
+        .header span {
+            margin: 0 10px;
+            cursor: pointer;
+            font-weight: normal;
+        }
+        .header span:hover {
+            text-decoration: underline;
+        }
+
+        /* Dashboard */
+        .sb1 {
+            background-color: #03a9f4;
+            padding: 15px;
+            color: white;
+            border-radius: 5px;
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+        }
+        .sb1 ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sb1 li {
+            background: rgba(255,255,255,0.2);
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .sb1 li:hover {
+            background: rgba(255,255,255,0.4);
+        }
+
+        /* Gallery */
+        .sb2 {
+            background-color: #03a9f4;
+            padding: 10px;
+            border-radius: 5px;
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            color: white;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Audio */
+        .sb3 {
+            background-color: #03a9f4;
+            padding: 10px;
+            border-radius: 5px;
+            grid-row: 2 / 3;
+            grid-column: 3 / 4;
+            color: white;
+        }
+        audio {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        /* Video Sidebar */
+        .sb {
+            background-color: #4caf50;
+            padding: 10px;
+            border-radius: 5px;
+            grid-row: 2 / 4;
+            grid-column: 4 / 5;   
+            color: white;
+        }
+        video {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        .main {
+            background-color: #ffeb3b;
+            padding: 15px;
+            border-radius: 5px;
+            grid-row: 3 / 4;
+            grid-column: 1 / 4;   
+        }
+        .main p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #3f51b5;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            grid-row: 4 / 5;
+            grid-column: 1 / 5;   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Learning Management System
+            <div>
+                <span>Home</span>
+                <span>About</span>
+                <span>Login</span>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="sb1">
+            <h3>Dashboard</h3>
+            <ul>
+                <li>Courses</li>
+                <li>Assignments</li>
+                <li>Grades</li>
+                <li>Messages</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+
+        <!-- Gallery -->
+        <div class="sb2">
+            <h3>Gallery</h3>
+            <div class="gallery">
+                <img src="gallery1.jpg" alt="Gallery Image 1">
+                <img src="gallery2.jpg" alt="Gallery Image 2">
+                <img src="gallery3.jpg" alt="Gallery Image 3">
+                <img src="gallery4.jpg" alt="Gallery Image 4">
+            </div>
+        </div>
+
+        <!-- Audio Player -->
+        <div class="sb3">
+            <h3>Audio Lecture</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Video Player -->
+        <div class="sb">
+            <h3>Course Video</h3>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <h3>Welcome to the LMS</h3>
+            <p>
+                This Learning Management System allows students to access online courses, submit assignments,
+                view grades, and interact with instructors. It provides an easy-to-use platform that enhances
+                learning experiences through multimedia content and collaborative tools. Enjoy seamless learning
+                with our interactive interface.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2025 Learning Management System. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

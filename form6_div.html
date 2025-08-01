@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .form-group {
+      display: flex;
+      margin-bottom: 15px;
+      align-items: center;
+    }
+
+    .form-group label {
+      width: 150px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      flex: 1;
+      padding: 6px;
+    }
+
+    .form-actions {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student Registration Form</h2>
+
+  <form action="success.html" method="post">
+
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <input type="radio" name="gender" value="Male" required> Male
+      <input type="radio" name="gender" value="Female"> Female
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Contact</label>
+      <input type="tel" name="contact" required>
+    </div>
+
+    <div class="form-group">
+      <label>Address</label>
+      <textarea name="address" rows="3" cols="30"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Date of Birth</label>
+      <input type="date" name="dob">
+    </div>
+
+    <div class="form-group">
+      <label>Languages</label>
+      <input type="checkbox" name="languages[]" value="English"> English
+      <input type="checkbox" name="languages[]" value="Hindi"> Hindi
+      <input type="checkbox" name="languages[]" value="Telugu"> Telugu
+    </div>
+
+    <div class="form-group">
+      <label>Branch</label>
+      <select name="branch">
+        <option value="">--Select--</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Upload Photo</label>
+      <input type="file" name="photo">
+    </div>
+
+    <div class="form-actions">
+      <input type="submit" value="Register">
+      <input type="reset" value="Clear">
+    </div>
+
+  </form>
+
+</body>
+</html>

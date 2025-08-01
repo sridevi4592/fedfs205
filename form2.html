@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration Form</title>
+</head>
+<body>
+
+  <h2>Student Registration Form</h2>
+
+  <form action="success.html" method="post" enctype="multipart/form-data">
+
+    <!-- Personal Info Section -->
+    <div>
+      <h3>Personal Information</h3>
+
+      <div>
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required>
+      </div><br>
+
+      <div>
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male" required> Male<br>
+        <input type="radio" id="female" name="gender" value="Female"> Female
+      </div><br>
+
+      <div>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+      </div><br>
+
+      <div>
+        <label for="contact">Contact Number:</label><br>
+        <input type="tel" id="contact" name="contact" required>
+      </div><br>
+
+      <div>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required>
+      </div><br>
+
+      <div>
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="30" required></textarea>
+      </div><br>
+    </div>
+
+    <!-- Academic Info Section -->
+    <div>
+      <h3>Academic Details</h3>
+
+      <div>
+        <label for="branch">Branch:</label><br>
+        <select id="branch" name="branch" required>
+          <option value="">--Select--</option>
+          <option value="CSE">Computer Science</option>
+          <option value="ECE">Electronics</option>
+          <option value="EEE">Electrical</option>
+          <option value="MECH">Mechanical</option>
+          <option value="CIVIL">Civil</option>
+        </select>
+      </div><br>
+
+      <div>
+        <label>Languages Known:</label><br>
+        <input type="checkbox" name="languages[]" value="English"> English<br>
+        <input type="checkbox" name="languages[]" value="Hindi"> Hindi<br>
+        <input type="checkbox" name="languages[]" value="Telugu"> Telugu<br>
+        <input type="checkbox" name="languages[]" value="Other"> Other
+      </div><br>
+
+      <div>
+        <label for="resume">Upload Resume:</label><br>
+        <input type="file" id="resume" name="resume" required>
+      </div><br>
+    </div>
+
+    <!-- Submit Section -->
+    <div>
+      <input type="submit" value="Register">
+      <input type="reset" value="Clear">
+    </div>
+
+  </form>
+
+</body>
+</html>
